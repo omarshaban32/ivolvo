@@ -1,0 +1,92 @@
+    1  sudo yum update
+    2  hostname -I
+    3  ls
+    4  github
+    5  sodu yum install github
+    6  sudo yum install github
+    7  sudo yum install git
+    8  github login
+    9  hostname -I
+   10  git --version
+   11  ls
+   12  mkdir ivolve
+   13  cd
+   14  cd ivolve/
+   15  mkdir day1
+   16  cd
+   17  cd ivolve/day1/
+   18  cd
+   19  mv ping.sh ivolve/day1/
+   20  cd ivolve/day1/
+   21  git add ping.sh 
+   22  git login 
+   23  git --help
+   24  git clone https://github.com/omarshaban32/ivolve-day1.git
+   25  git add ping.sh 
+   26  git config --global user.name "omarshaban32"
+   27  git config --global user.email "omar.shaban1989@gmail.com"
+   28  git add ping.sh 
+   29  ls
+   30  cat ping.sh 
+   31  cd ivolve-day1/
+   32  mv ../ping.sh .
+   33  ls
+   34  git config --global user.name "omarshaban32"
+   35  git config --global user.email "omar.shaban1989@gmail.com"
+   36  hostname -I
+   37  git add ping.sh
+   38  ./ping.sh 
+   39  ping 192.168.226.128
+   40  ls
+   41  git commit -m "Add script to ping 192.168.226.x subnet"
+   42  git push origin main
+   43  git init
+   44  git push origin main
+   45  git remote add origin https://github.com/omarshaban32/ivolve-day1.git
+   46  git init
+   47  git add ping.sh 
+   48  git commit -m "Add script to ping 192.168.226.x subnet"
+   49  git branch --unset-upstream
+   50  git commit -m "Add script to ping 192.168.226.x subnet"
+   51  git add ping.sh 
+   52  git commit -m "Add script to ping 192.168.226.x subnet"
+   53  git branch -M main
+   54  git remote add origin https://github.com/omarshaban32/ivolve-day1.git
+   55  git push -u origin main
+   56  ls
+   57  git remote add origin https://github.com/omarshaban32/ivolve-day1.git
+   58  git branch -M main
+   59  git push -u origin main
+   60  vim check_disk_space.sh
+   61  chmod +x check_disk_space.sh
+   62  sudo dnf install mailx
+   63  cat check_disk_space.sh 
+   64  subscription-manager register --username omarshaban33 --password Omarshaban12345 --auto-attach
+   65  sudo dnf install mailx
+   66  ./check_disk_space.sh
+   67  vim check_disk_space.sh 
+   68  ./check_disk_space.sh
+   69  vim check_disk_space.sh 
+   70  ./check_disk_space.sh
+   71  vim check_disk_space.sh 
+   72  ./check_disk_space.sh
+   73  sudo dnf install mailx
+   74  sudo dnf install sendmail
+   75  vim check_disk_space.sh 
+   76  ./check_disk_space.sh
+   77  vim email.txt
+   78  sendmail omar.shaban1989@gmail.com < email.txt
+   79  sudo yum install postfix sendmail
+   80  sudo yum update
+   81  sudo yum install postfix sendmail
+   82  yum clean all
+   83  sudo yum clean all
+   84  sudo yum -v check-update
+   85  sudo yum update
+   86  sudo yum upgrade
+   87  yum clean packages
+   88  sudo yum clean packages
+   89  sudo yum upgrade
+   90  sudo yum upgrade kernel
+   91  history
+   92  history > history-day1.txt
