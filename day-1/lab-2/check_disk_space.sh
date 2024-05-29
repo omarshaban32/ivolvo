@@ -1,24 +1,26 @@
 #!/bin/bash
 
-# Set the threshold (in percentage)
-THRESHOLD=1
-
 # Email settings
-EMAIL="omar.shaban1989@gmail.com"
+EMAIL="omar.shaban1989@gmail.com.com"
 SUBJECT="Disk Space Alert on $(hostname)"
-MESSAGE_FILE="/tmp/disk_space_alert.txt"
+THRESHOLD=1  # Threshold percentage for disk usage
 
-# Check disk space usage
-df -H | grep -vE '^Filesystem|tmpfs|cdrom' | awk '{ print $5 " " $1 }' | while read output; do
-  # Extract usage percentage and filesystem
-  usage=$(echo $output | awk '{ print $1 }' | sed 's/%//g')
-  filesystem=$(echo $output | awk '{ print $2 }')
+# Function to send email
+send_email() {
+    local message=$1
+    echo -e "Subject: $SUBJECT\n\n$message" | ssmtp "$EMAIL"
+}
 
-  # Check if usage exceeds threshold
-  if [ $usage -ge $THRESHOLD ]; then
-    echo "Warning: Disk space on $filesystem is critically low. Used: $usage%" > $MESSAGE_FILE
-    echo "subject: "$SUBJECT" \n "$MESSAGE_FILE"" > email.txt
-    sendmail "$EMAIL" < email.txt
-  fi
+# Check disk usage
+df -H | grep -vE '^Filesystem|tmpfs|cdrom' | awk '{ print $5 " " $1 }' | while read output;
+do
+    # Extract the percentage value and remove the '%' sign
+    usage=$(echo $output | awk '{ print $1}' | cut -d'%' -f1)
+    partition=$(echo $output | awk '{ print $2 }')
+
+    if [ $usage -ge $THRESHOLD ]; then
+        MESSAGE="Warning: Disk usage on $partition has reached $usage% on $(hostname)"
+        send_email "$MESSAGE"
+    fi
 done
 

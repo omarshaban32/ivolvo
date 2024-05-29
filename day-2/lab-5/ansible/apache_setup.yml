@@ -1,0 +1,44 @@
+---
+- name: Configure Apache Web Server
+  hosts: webservers
+  become: yes
+  vars:
+    sample_site_content: "<html><body><h1>Welcome to Apache Web Server from ivolve</h1></body></html>"
+
+  tasks:
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Start and enable Apache service
+      systemd:
+        name: apache2
+        state: started
+        enabled: yes
+
+    - name: Deploy sample website
+      copy:
+        content: "{{ sample_site_content }}"
+        dest: /var/www/html/index.html
+
+    - name: Set proper permissions on web root
+      file:
+        path: /var/www/html
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: '0755'
+
+    - name: Ensure UFW is installed
+      apt:
+        name: ufw
+        state: present
+        update_cache: yes
+
+    - name: Allow 'Apache Full' profile in UFW
+      ufw:
+        rule: allow
+        name: 'Apache Full'
+

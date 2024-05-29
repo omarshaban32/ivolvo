@@ -1,0 +1,22 @@
+---
+- name: Configure web application
+  hosts: webservers
+  become: yes
+  vars_files:
+    - vault.yml
+  tasks:
+    - name: Install MySQL client
+      apt:
+        name: mysql-client
+        state: present
+        update_cache: yes
+
+    - name: Create a configuration file with the database password
+      template:
+        src: db_config.j2
+        dest: /etc/my_app/db_config.conf
+        owner: root
+        group: root
+        mode: '0600'
+
+
