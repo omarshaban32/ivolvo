@@ -1,0 +1,13 @@
+---
+- name: Update packages on dev Environment
+  hosts: all
+  become: true
+  vars:
+    ansible_python_interpreter: /usr/bin/python3.9
+  tasks:
+    - name: Update packages on dev servers
+      yum:
+        name: '*'
+        state: latest
+      when: hostvars[inventory_hostname]['tags']['Environment'] == 'dev'
+
