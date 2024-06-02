@@ -1,0 +1,421 @@
+    1  sudo adduser omar
+    2  sudo deluser omar
+    3  sudo deluser -h omar
+    4  sudo deluser --remove-all-files omar
+    5  sudo deluser --remove-home omar
+    6  cat README.txt 
+    7  cd ../lab-2
+    8  sudo dnf install mailx
+    9  sudo apt-get update
+   10  sudo apt-get install sendmail
+   11  sendmail email.txt omar.shaban1989@gmail.com
+   12  echo -e "To: omar.shaban32@gmail.com\nSubject: Test Email\nFrom: omar.elsheemy32@gmail.com\n\nThis is a test email sent using sendmail." | sendmail -t
+   13  sudo apt update
+   14  sudo apt upgrade 
+   15  ls
+   16  mkdir ivolvo
+   17  cd ivolvo/
+   18  mkdir day-1
+   19  git clone https://github.com/omarshaban32/ivolvo.git
+   20  sudo apt install git
+   21  ssh-keygen -t rsa -b 4096 -C "omar.shaban1989@gmail.com"
+   22  eval "$(ssh-agent -s)"
+   23  ssh-add ~/.ssh/id_rsa
+   24  cat ~/.ssh/id_rsa.pub
+   25  git clone git@github.com:omarshaban32/ivolvo.git
+   26  ls
+   27  rm -r day-1
+   28  mv day1.zip ivolvo/
+   29  cd ivolvo/
+   30  mkdir day-1
+   31  mv day1.zip day-1/
+   32  ls
+   33  cd
+   34  cd ivolvo/ivolvo/day-1/
+   35  unzip day1.zip 
+   36  ls
+   37  rm day1.zip 
+   38  mkdir lab-1
+   39  mkdir lab-2
+   40  mkdir lab-3
+   41  mv check_disk_space.sh lab-2
+   42  mv ping.sh lab-3
+   43  mv email.txt lab-2
+   44  ls
+   45  cd lab-1
+   46  vim README.txt
+   47  sudo apt install vim
+   48  vim README.txt
+   49  vim lab-1.sh
+   50  cd ../
+   51  cd lab-3
+   52  ls
+   53  vim ping.sh 
+   54  cd ../
+   55  cd lab-2
+   56  ls
+   57  vim check_disk_space.sh 
+   58  vim check_disk_space-2.sh 
+   59  chmod +x check_disk_space-2.sh
+   60  ./check_disk_space-2.sh
+   61  vim check_disk_space-2.sh 
+   62  ./check_disk_space-2.sh
+   63  cat /tmp/disk_space_alert.txt
+   64  cd ../../
+   65  ls
+   66  la -a
+   67  git add day-1/
+   68  git commit -m "day-1 with initial content"
+   69  git push origin main
+   70  ls
+   71  mkdir day-2
+   72  cd day-2
+   73  mkdir lab-4 lab-5 lab-6
+   74  cd lab-4
+   75  cd ../../day-1/lab-2
+   76  vim README.txt
+   77  cd ../lab-3
+   78  vim README.txt
+   79  cd ../lab-1
+   80  cat README.txt 
+   81  cd ../../day-2/lab-4
+   82  vim README.txt
+   83  sudo apt-get update
+   84  sudo apt-get install ansible
+   85  mkdir -p ~/ansible
+   86  deldir -p ~/ansible
+   87  rm  ~/ansible
+   88  rm -r  ~/ansible
+   89  mkdir -p ./ansible
+   90  cd ansible/
+   91  vim hosts
+   92  ls
+   93  cd iv
+   94  cd ivolvo/
+   95  cd ivolvo/day-1/lab-2
+   96  ls
+   97  vim check_disk_space-2.sh 
+   98  ./check_disk_space-2.sh 
+   99  hostname -I
+  100  cd ivolvo/ivolvo/day-2/lab-4/
+  101  ls
+  102  cd ansible/
+  103  ls
+  104  vim hosts
+  105  ssh-copy-id ivolvo@192.168.124.129
+  106  ssh-copy-id root@192.168.124.129
+  107  ssh-copy-id ivolve@192.168.124.129
+  108  ssh-copy-id osboxes.org@192.168.124.129
+  109  ssh-copy-id osboxes@192.168.124.129
+  110  ansible -i hosts managed -m ping
+  111  ansible -i hosts managed -m shell -a 'df -h'
+  112  ansible -i hosts managed -m shell -a 'uptime'
+  113  vim README.txt
+  114  ls
+  115  cd ../../lab-5
+  116  vim README.txt
+  117  vim apache_setup.yml
+  118  mkdir -p ./ansible
+  119  cd a
+  120  mv apache_setup.yml ./ansible/
+  121  ls
+  122  vim hosts
+  123  ansible-playbook -i hosts apache_setup.yml
+  124  cd ansible/
+  125  ansible-playbook -i hosts apache_setup.yml
+  126  ls
+  127  cd ../
+  128  ls
+  129  mv hosts ./ansible/
+  130  cd ansible/
+  131  ansible-playbook -i hosts apache_setup.yml
+  132  vim hosts 
+  133  ansible-playbook -i hosts apache_setup.yml
+  134  vim hosts 
+  135  vim apache_setup.yml 
+  136  ansible-playbook -i hosts apache_setup.yml
+  137  ansible-playbook -i hosts apache_setup.yml -kK
+  138  sudo apt install sshpass
+  139  ansible-playbook -i hosts apache_setup.yml -kK
+  140  vim apache_setup.yml 
+  141  ansible-playbook -i hosts apache_setup.yml -kK
+  142  vim apache_setup.yml 
+  143  ansible-playbook -i hosts apache_setup.yml -kK
+  144  ls
+  145  cat hosts
+  146  vim apache_setup.yml 
+  147  ansible-playbook -i hosts apache_setup.yml -kK
+  148  vim apache_setup.yml 
+  149  ansible-playbook -i hosts apache_setup.yml -kK
+  150  vim apache_setup.yml 
+  151  cd ../../lab-6/
+  152  mkdir -p ./ansible
+  153  cd ansible/
+  154  vim playbook.yml
+  155  vim vault.yml
+  156  vim playbook.yml
+  157  vim  db_config.j2
+  158  cd ../../../day-1/lab-2
+  159  ls
+  160  vim check_disk_space
+  161  vim check_disk_space.sh 
+  162  sudo apt install ssmtp
+  163  ./check_disk_space.sh 
+  164  sudo apt-get install mailutils
+  165  ./check_disk_space.sh 
+  166  sudo apt install ssmtp
+  167  sudo vim /etc/ssmtp/ssmtp.conf
+  168  vim msg.txt
+  169  ssmtp omar.shaban1989@gmail.com < msg.txt
+  170  sudo ssmtp recepient@gmail.com < msg.txt
+  171  vim check_disk_space.sh 
+  172  sudo vim /etc/ssmtp/ssmtp.conf
+  173  sudo ssmtp recepient@gmail.com < msg.txt
+  174  sudo vim /etc/ssmtp/ssmtp.conf
+  175  sudo ssmtp recepient@gmail.com < msg.txt
+  176  sudo vim /etc/ssmtp/ssmtp.conf
+  177  sudo ssmtp recepient@gmail.com < msg.txt
+  178  sudo vim /etc/ssmtp/ssmtp.conf
+  179  sudo ssmtp recepient@gmail.com < msg.txt
+  180  cd
+  181  sudo apt install aws
+  182  hostname -I
+  183  sudo apt install aws
+  184  sudo apt install aws-cli
+  185  sudo apt update
+  186  sudo apt install curl unzip -y
+  187  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  188  unzip awscliv2.zip
+  189  sudo ./aws/install
+  190  aws --version
+  191  rm -rf awscliv2.zip aws
+  192  ls
+  193  cat dead.letter 
+  194  aws configure
+  195  aws ec2 describe-instances
+  196  aws configure
+  197  aws ec2 describe-instances
+  198  aws s3 ls
+  199  aws configure --profile admin-1
+  200  aws configure --profile admin-2-prog
+  201  aws configure --profile dev
+  202  aws ec2 describe-instances --profile dev
+  203  clear
+  204  aws ec2 describe-instances --profile dev
+  205  aws s3 ls --profile dev
+  206  aws iam list-users
+  207  aws iam list-groups
+  208  clear
+  209  ls
+  210  ssh -i BastionHostkeypair.pem admin-1@54.210.166.80
+  211  ssh -i BastionHostkeypair.pem omarshaban32@54.210.166.80
+  212  ssh -i BastionHostkeypair.pem ec2-user@54.210.166.80
+  213  chmod 400 BastionHostkeypair.pem 
+  214  ssh -i BastionHostkeypair.pem ec2-user@54.210.166.80
+  215  clear
+  216  ssh -i BastionHostkeypair.pem ec2-user@54.210.166.80
+  217  clear
+  218  ssh -i BastionHostkeypair.pem ec2-user@54.210.166.80
+  219  ls
+  220  cd ivolvo/ivolvo/
+  221  ls
+  222  ls -a
+  223  cd day-1/lab-2
+  224  ls
+  225  vim check_disk_space.
+  226  vim check_disk_space.sh 
+  227  sudo apt update
+  228  sudo apt install ssmtp -y
+  229  apt list --upgradable
+  230  sudo apt autoremove
+  231  sudo nano /etc/ssmtp/ssmtp.conf
+  232  sudo vim /etc/ssmtp/ssmtp.conf
+  233  ls
+  234  vim check_disk_space.sh 
+  235  ./check_disk_space.sh
+  236  vim check_disk_space.sh 
+  237* 
+  238  vim check_disk_space.sh 
+  239  vim check_disk_space1.sh 
+  240  chmod +x check_disk_space1.sh 
+  241  ./check_disk_space1.sh 
+  242  vim check_disk_space.sh 
+  243  vim check_disk_space1.sh 
+  244  ./check_disk_space1.sh 
+  245  vim check_disk_space.sh 
+  246  ./check_disk_space.sh 
+  247  ssh -i mykeypair.pem ec2-user@16.170.141.250
+  248  chmod 400 ~/mykeypair.pem 
+  249  cd
+  250  ssh -i mykeypair.pem ec2-user@16.170.141.250
+  251  ssh -i mykeypair.pem ec2-user@13.60.52.121
+  252  ssh -i mykeypair.pem ec2-user@16.170.141.250
+  253  ls
+  254  aws s3api create-bucket --bucket my-bucket-name --region us-east-1
+  255  aws s3api create-bucket --bucket omarshaban-4tr426tr4rt7248ry87 --region us-east-1
+  256  mkdir ivolvo/ivolvo/day-4
+  257  mkdir ivolvo/ivolvo/day-4/lab-22
+  258  cd ivolvo/ivolvo/day-4/lab-22/
+  259  vim bucket-policy.json
+  260  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  261  vim bucket-policy.json
+  262  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  263  vim s3-put-bucket-policy.json
+  264  aws iam create-policy --policy-name S3PutBucketPolicyPermission --policy-document file://s3-put-bucket-policy.json
+  265  aws iam attach-user-policy --user-name omarshaban32 --policy-arn arn:aws:iam::471112541996:policy/S3PutBucketPolicyPermission
+  266  aws iam attach-user-policy --user-name root --policy-arn arn:aws:iam::471112541996:policy/S3PutBucketPolicyPermission
+  267  aws iam attach-user-policy --user-name admin-2-prog --policy-arn arn:aws:iam::471112541996:policy/S3PutBucketPolicyPermission
+  268  aws iam attach-user-policy --user-name dev --policy-arn arn:aws:iam::471112541996:policy/S3PutBucketPolicyPermission
+  269  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  270  aws iam attach-user-policy --user-name admin-1 --policy-arn arn:aws:iam::471112541996:policy/S3PutBucketPolicyPermission
+  271  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  272  aws iam attach-user-policy --user-name admin --policy-arn arn:aws:iam::471112541996:policy/S3PutBucketPolicyPermission
+  273  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  274  vim bucket-policy.json 
+  275  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  276  vim bucket-policy.json 
+  277  ls
+  278  rm bucket-policy.json s3-put-bucket-policy.json 
+  279  ls
+  280  aws s3api create-bucket --bucket omarshaban-4tr426tr4rt7248r --region us-west-1
+  281  aws s3api create-bucket --bucket omarshaban-4tr426tr4rt7248r423 --region us-west-1
+  282  aws s3api create-bucket --bucket omarshaban-4tr426rtr4rt7248r423 --region us-west-1
+  283  aws s3api create-bucket --bucket omarshaban-4tr426tr4rt7248ry87 --region us-east-1
+  284  vim bucket-policy.json
+  285  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  286  aws s3api delete-public-access-block --bucket omarshaban-4tr426tr4rt7248ry87
+  287  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  288  aws s3 cp /path/to/local/file.txt s3://my-bucket-name/file.txt
+  289  touch omarshaban.txt
+  290  aws s3 cp omarshaban.txt s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt
+  291  aws s3 cp s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt omarshaban-downloaded.txt
+  292  aws s3 cp omarshaban.txt s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt
+  293  aws s3 cp s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt omarshaban-downloaded.txt
+  294  aws s3api put-bucket-versioning --bucket omarshaban-4tr426tr4rt7248ry87 --versioning-configuration Status=Enabled
+  295  aws s3api create-bucket --bucket my-logging-bucket-y3gd832gd82 --region us-west-1
+  296  aws s3api create-bucket --bucket omarshaban-logging-fh4wf4389f3j9 --region us-west-1
+  297  aws s3api create-bucket --bucket omarshaban-logging-fh4wf4389f3j9 --region us-east-1
+  298  aws s3api put-bucket-logging --bucket my-bucket-name --bucket-logging-status '{
+    "LoggingEnabled": {
+        "TargetBucket": "my-logging-bucket",
+        "TargetPrefix": "my-bucket-logs/"
+    }
+}'
+  299  aws s3api put-bucket-logging --bucket omarshaban-logging-fh4wf4389f3j9 --bucket-logging-status '{
+    "LoggingEnabled": {
+        "TargetBucket": "my-logging-bucket",
+        "TargetPrefix": "my-bucket-logs/"
+    }
+}'
+  300  aws s3api delete-public-access-block --bucket omarshaban-logging-fh4wf4389f3j9
+  301  aws s3api put-bucket-logging --bucket omarshaban-logging-fh4wf4389f3j9 --bucket-logging-status '{
+    "LoggingEnabled": {
+        "TargetBucket": "my-logging-bucket",
+        "TargetPrefix": "my-bucket-logs/"
+    }
+}'
+  302  aws s3api put-bucket-logging --bucket omarshaban-logging-fh4wf4389f3j9 --bucket-logging-status '{
+    "LoggingEnabled": {
+        "TargetBucket": "omarshaban-logging-fh4wf4389f3j9",
+        "TargetPrefix": "my-bucket-logs/"
+    }
+}'
+  303  clear
+  304  history
+  305  clear
+  306  aws s3api create-bucket --bucket omarshaban-4tr426tr4rt7248ry87 --region us-east-1
+  307  aws s3api delete-public-access-block --bucket omarshaban-4tr426tr4rt7248ry87
+  308  vim bucket-policy.json
+  309  aws s3api put-bucket-policy --bucket omarshaban-4tr426tr4rt7248ry87 --policy file://bucket-policy.json
+  310  ls
+  311  rm omarshaban-downloaded.txt 
+  312  aws s3 cp omarshaban.txt s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt
+  313  aws s3 cp s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt omarshaban-downloaded.txt
+  314  ls
+  315  aws s3api put-bucket-versioning --bucket omarshaban-4tr426tr4rt7248ry87 --
+  316  versioning-configuration Status=Enabled
+  317  clear
+  318  aws s3api put-bucket-versioning --bucket omarshaban-4tr426tr4rt7248ry87 --versioning-configuration Status=Enabled
+  319  aws s3api create-bucket --bucket omarshaban-logging-fh4wf4389f3j9 --region us-east-1
+  320  aws s3api delete-public-access-block --bucket  omarshaban-logging-fh4wf4389f3j9
+  321  aws s3api put-bucket-logging --bucket omarshaban-logging-fh4wf4389f3j9 --bucket-logging-status '{
+    "LoggingEnabled": {
+        "TargetBucket": "omarshaban-logging-fh4wf4389f3j9",
+        "TargetPrefix": "my-bucket-logs/"
+    }
+}'
+  322  vim bucket-policy.json
+  323  vim omarshaban.txt 
+  324  aws s3 cp omarshaban.txt s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt
+  325  vim omarshaban.txt 
+  326  aws s3 cp omarshaban.txt s3://omarshaban-4tr426tr4rt7248ry87/omarshaban.txt
+  327  ls
+  328  cd ../../
+  329  ls
+  330  git add all
+  331  git add *
+  332  git commit -m "Add day-2"
+  333  git push origin main
+  334  git pull
+  335  git config pull.rebase true
+  336  git pull
+  337  git add *
+  338  git commit -m "Add day-2"
+  339  git push origin main
+  340  clear
+  341  sudo apt update
+  342  sudo apt install nodejs npm
+  343  clear
+  344  ls
+  345  cd day-4
+  346  ls
+  347  mkdir lab-23
+  348  cd lab-23
+  349  aws dynamodb create-table --table-name ItemsTable   --attribute-definitions AttributeName=ID,AttributeType=S   --key-schema AttributeName=ID,KeyType=HASH   --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
+  350  vim lambda_function.py
+  351  zip function.zip lambda_function.py
+  352  vim trust-policy.json
+  353  aws iam create-role --role-name LambdaDynamoDBRole --assume-role-policy-document file://trust-policy.json
+  354  vim dynamodb-policy.json
+  355  aws iam put-role-policy --role-name LambdaDynamoDBRole --policy-name LambdaDynamoDBPolicy --policy-document file://dynamodb-policy.json
+  356  aws iam attach-role-policy --role-name LambdaDynamoDBRole --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+  357  ls
+  358  aws lambda create-function --function-name CreateItemFunction   --runtime python3.8   --role arn:aws:iam::471112541996:role/LambdaDynamoDBRole   --handler lambda_function.create_item   --zip-file fileb://function.zip
+  359  aws lambda create-function --function-name GetItemFunction   --runtime python3.8   --role arn:aws:iam::471112541996:role/LambdaDynamoDBRole   --handler lambda_function.get_item   --zip-file fileb://function.zip
+  360  aws lambda create-function --function-name UpdateItemFunction   --runtime python3.8   --role arn:aws:iam::471112541996:role/LambdaDynamoDBRole   --handler lambda_function.update_item   --zip-file fileb://function.zip
+  361  aws lambda create-function --function-name DeleteItemFunction   --runtime python3.8   --role arn:aws:iam::471112541996:role/LambdaDynamoDBRole   --handler lambda_function.delete_item   --zip-file fileb://function.zip
+  362  aws apigateway create-rest-api --name "ItemsAPI"
+  363  aws apigateway get-rest-apis
+  364  aws apigateway get-resources --rest-api-id  mpxjqwcn8d
+  365  aws apigateway create-resource --rest-api-id mpxjqwcn8d --parent-id vmgrwgg810 --path-part items
+  366  aws apigateway put-method --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method POST --authorization-type "NONE"
+  367  aws apigateway put-method --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method GET --authorization-type "NONE"
+  368  aws apigateway put-method --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method PUT --authorization-type "NONE"
+  369  aws apigateway put-method --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method DELETE --authorization-type "NONE"
+  370  aws apigateway put-integration --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method POST   --type AWS_PROXY --integration-http-method POST --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:471112541996:function:CreateItemFunction/invocations
+  371  aws apigateway put-integration --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method GET   --type AWS_PROXY --integration-http-method POST --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:471112541996:function:GetItemFunction/invocations
+  372  aws apigateway put-integration --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method PUT   --type AWS_PROXY --integration-http-method POST --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:471112541996:function:UpdateItemFunction/invocations
+  373  aws apigateway put-integration --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method DELETE   --type AWS_PROXY --integration-http-method POST --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:471112541996:function:DeleteItemFunction/invocations
+  374  aws apigateway create-deployment --rest-api-id mpxjqwcn8d --stage-name prod
+  375  curl -X POST -H "Content-Type: application/json" -d '{"ID": "1", "Name": "Item1"}' https://mpxjqwcn8d.execute-api.us-east-1.amazonaws.com/prod/items
+  376  aws iam attach-role-policy --role-name LambdaDynamoDBRole --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+  377  aws lambda get-function-configuration --function-name CreateItemFunction
+  378  vim test-event.json
+  379  aws lambda invoke --function-name CreateItemFunction --payload file://test-event.json output.json
+  380  vim test-event.json
+  381  curl -X POST -H "Content-Type: application/json" -d '{"ID": "1", "Name": "Item1"}' https://mpxjqwcn8d.execute-api.us-east-1.amazonaws.com/prod/items
+  382  aws lambda invoke --function-name CreateItemFunction --payload file://test-event.json output.json
+  383  cat output.json
+  384  aws apigateway get-integration --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method POST
+  385  python -v
+  386  python3 -v
+  387  ls
+  388  vim lambda_function.py 
+  389  aws lambda create-function --function-name CreateItemFunction   --runtime python3.8   --role arn:aws:iam::471112541996:role/LambdaDynamoDBRole   --handler lambda_function.create_item   --zip-file fileb://function.zip
+  390  aws apigateway put-method --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method POST --authorization-type "NONE"
+  391  aws apigateway put-integration --rest-api-id mpxjqwcn8d --resource-id 77qqrd --http-method POST   --type AWS_PROXY --integration-http-method POST --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:471112541996:function:CreateItemFunction/invocations
+  392  aws apigateway create-deployment --rest-api-id mpxjqwcn8d --stage-name prod
+  393  curl -X POST -H "Content-Type: application/json" -d '{"ID": "1", "Name": "Item1"}' https://mpxjqwcn8d.execute-api.us-east-1.amazonaws.com/prod/items
+  394  touch history < history
+  395  history
+  396  history > history.txt
