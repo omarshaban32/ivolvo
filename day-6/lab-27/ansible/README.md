@@ -1,4 +1,4 @@
-## Lab5 Description 
+## Lab-27 Description 
 
  Ansible Roles for Application Deployment Objective: Organize Ansible playbooks using roles. Create an Ansible role for installing Jenkins, docker, openshift CLI 'OC'.
 
