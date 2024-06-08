@@ -9,8 +9,14 @@
 4. **Check the Configuration that you apply in the EC2**
 
 ## Server
+### you can add the server to the inventory or use aws_ec2.yml plugin by apply this command
 
+  ```
+     ansible-playbook -i ./aws_ec2.yml playbook.yml
+  ```
  ![](https://github.com/omarshaban32/ivolvo/blob/main/day-6/lab-27/ansible/screenshot/server.png)
+
+ 
 
 
 ## Solution Steps
