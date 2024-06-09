@@ -27,8 +27,10 @@ managed_host
 ```
 
 ### Step4: Configure SSH Access
+```
 ssh-keygen
 ssh-copy-id your_user@managed_host
+```
 
 ### Step5: Perform Ad-hoc Commands
 ```
