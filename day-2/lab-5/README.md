@@ -4,7 +4,7 @@
 
 ## web server
 
-![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshot/web.png)
+![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshots/web.png)
 
 
 ## steps 
@@ -92,13 +92,13 @@ web
   ansible-playbook -i inventory playbook.yaml
 ```
 #### playbook
-![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshot/run.png)
+![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshots/run.png)
 
 #### ssh to web server
-![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshot/ssh.png)
+![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshots/ssh.png)
 
 #### website
-![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshot/website.png)
+![](https://github.com/omarshaban32/ivolvo/blob/main/day-2/lab-5/screenshots/website.png)
 
 
 
