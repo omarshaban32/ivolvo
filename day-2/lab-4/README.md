@@ -18,7 +18,7 @@
 ### Step2: Configure Ansible
 mkdir -p ~/ansible
 cd ~/ansible
-vim hosts
+vim inventory
 
 ### Step3: add hosts in inventory file
 ```
