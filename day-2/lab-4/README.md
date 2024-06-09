@@ -5,7 +5,7 @@
 ## steps 
  1. **Install Ansible**
  2. **Configure Ansible**
- 3. **add hosts**
+ 3. **add hosts in inventory file**
  4. **Configure SSH Access**
  5. **Perform Ad-hoc Commands**
 
@@ -20,7 +20,7 @@ mkdir -p ~/ansible
 cd ~/ansible
 vim hosts
 
-### Step3: add hosts 
+### Step3: add hosts in inventory file
 ```
 [managed]
 managed_host
