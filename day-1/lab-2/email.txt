@@ -1,1 +1,0 @@
-subject: Disk Space Alert on localhost.localdomain \n /tmp/disk_space_alert.txt
