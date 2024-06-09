@@ -29,7 +29,6 @@ web
 ```
 ### Step4: Configure AWS AccessKey
 
-#### Run 
   ```
   aws configure
   ```
