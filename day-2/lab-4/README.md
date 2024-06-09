@@ -16,9 +16,11 @@
  sudo apt-get install ansible
 ```
 ### Step2: Configure Ansible
+```
 mkdir -p ~/ansible
 cd ~/ansible
 vim inventory
+```
 
 ### Step3: add hosts in inventory file
 ```
